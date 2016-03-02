@@ -1,0 +1,89 @@
+// This is file include all file SASS style of theme.
+
+// This is link import file mixin.scss. The file description for css3 prefix, animation ... 
+@import "mixin/mixin";
+
+/* ---------------------------------------- */
+/* 1.  Base Style
+/* ---------------------------------------- */
+@import "base/base";
+@import "base/wordpress_core";
+
+/* ---------------------------------------- */
+/* 2.  Header Style
+/* ---------------------------------------- */
+@import "layout/header/header_1";
+@import "layout/header/header_2";
+@import "layout/header/header_3";
+@import "layout/header/header_4";
+@import "layout/header/header_5";
+
+/* ---------------------------------------- */
+/* 3.  Preloading
+/* ---------------------------------------- */
+@import "layout/preloading";
+
+/* ---------------------------------------- */
+/* 4.  Component & Layout
+/* ---------------------------------------- */
+/*** Button ***/
+@import "component/button";
+/*** Dialog ***/
+@import "component/dialog";
+/*** Mega Main Menu ***/
+@import "component/mega_menu";
+/*** Contact Form ***/
+@import "component/contact_form";
+/*** post-link-review ***/
+@import "component/post_link";
+/*** Open Tables ***/
+@import "component/open_tables";
+/*** Responsive Menu ***/
+@import "component/responsive_menu";
+/*** Breadcrumb ***/
+@import "layout/breadcrumb";
+/*** Social Icon Style ***/
+@import "layout/social_icon";
+
+/* ---------------------------------------- */
+/* 5.  Widget Style
+/* ---------------------------------------- */
+@import "layout/widget";
+
+/* ---------------------------------------- */
+/* 6.  Blog Style
+/* ---------------------------------------- */
+@import "layout/blog";
+@import "layout/blog_single";
+@import "layout/comment";
+
+/* ---------------------------------------- */
+/* 8.  Comment Style
+/* ---------------------------------------- */
+@import "layout/woocommerce";
+
+/* ---------------------------------------- */
+/* 7.  Project Style
+/* ---------------------------------------- */
+@import "layout/project_single";
+
+/* ---------------------------------------- */
+/* 8.  WooCommerce Style
+/* ---------------------------------------- */
+@import "layout/project_single";
+
+/* ---------------------------------------- */
+/* 8.  404 Page Style
+/* ---------------------------------------- */
+@import "layout/404_page";
+
+/* ---------------------------------------- */
+/* 2.  Footer Style
+/* ---------------------------------------- */
+@import "layout/footer/footer_1";
+@import "layout/footer/footer_2";
+@import "layout/footer/footer_3";
+@import "layout/footer/footer_4";
+@import "layout/footer/footer_5";
+@import "layout/footer/footer_6";
+@import "layout/footer/footer_7";

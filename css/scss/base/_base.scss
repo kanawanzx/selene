@@ -1,0 +1,28 @@
+// Base Core Theme.
+a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,iframe,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var{font:inherit inherit 100% inherit;border:0;margin:0;outline:0;padding:0;vertical-align:baseline}html{font-size:62.5%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{background:#fff;overflow-x:hidden}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}caption,td,th{font-weight:400;text-align:left}blockquote:after,blockquote:before,q:after,q:before{content:""}blockquote,q{quotes:"" ""}a:active,a:focus,a:hover{outline:0}a img{border:0}body,button,input,select,textarea{color:#404040;font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1,h2,h3,h4,h5,h6{clear:both;color:#2a2a2a;line-height:1.5;font-weight:300;margin-bottom:20px}h1{font-size:31px}h2{font-size:28px}h3{font-size:25px}h4{font-size:22px}h5{font-size:19px}h6{font-size:16px}hr{background:#ccc;border:0;height:1px;margin-bottom:1.5em}p{margin-bottom:1.5em}p:last-child{margin-bottom:0}dt{font-weight:700}dd{margin:0 1.5em 1.5em}b,strong{font-weight:700}cite,dfn,em,i{font-style:italic}blockquote{margin:0 1.5em}address{margin:0 0 1.5em}pre{font:1.5rem/1.6 "Courier 10 Pitch",Courier,monospace;background:#eee;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}code,kbd,tt,var{font:15px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace}abbr,acronym{border-bottom:1px dotted #666;cursor:help}ins,mark{text-decoration:none}sub,sup{font-size:75%;height:0;line-height:0;position:relative;vertical-align:baseline}sup{bottom:1ex}sub{top:.5ex}small{font-size:75%}big{font-size:125%}figure{margin:0}table{border-collapse:collapse!important}th{font-weight:700}img{height:auto;max-width:100%}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input[type=button],input[type=reset],input[type=submit]{background:#e6e6e6;color:rgba(0,0,0,.8);cursor:pointer;-webkit-appearance:button;font-size:14px;font-size:1.2rem;line-height:1;padding:.6em 1em .4em;border:none}input[type=checkbox],input[type=radio]{padding:0}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=text],input[type=email],input[type=url],input[type=password],input[type=search],textarea{color:#666;border:1px solid #ccc;border-radius:3px}input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,input[type=password]:focus,input[type=search]:focus,textarea:focus{color:#111}input[type=text],input[type=email],input[type=url],input[type=password],input[type=search]{padding:3px}textarea{overflow:auto;padding-left:3px;vertical-align:top;width:98%}a{color:#f9bf3b;text-decoration:none}table{border:1px solid #e0e0e0;border-spacing:0;margin:0 0 20px;width:100%}table caption{font-weight:700;margin-bottom:10px}td{text-align:center;border:1px solid #e0e0e0;padding:5px}th{background:#fff;padding:5px;text-align:center}.fl{float:left}.fr{float:right}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.clear{clear:both}
+
+// Style Content
+.as-page-wrapper{
+    min-height: 200px;
+    position: relative;
+    display: block;
+}
+.as-hidden{
+    overflow: hidden;
+    height:100%;
+}
+div.wpcf7-validation-errors{
+    display: inline-table !important;
+}
+.as-boxed{
+	position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    .as-wrapper{
+	    width: 100%;
+    }
+    @include box-shadow(0 10px 40px #bbb);
+    @media screen and (max-width: 1170px) { 
+        width: auto !important;        
+    }
+}

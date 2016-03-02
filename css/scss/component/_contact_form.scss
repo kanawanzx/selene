@@ -1,0 +1,87 @@
+// Contact Style 1
+.contact-style-1 {
+    > p.dslc-col{
+        position: relative;
+        span input,
+        span textarea{
+            width: 100%;
+            border: none;
+            background: #F8F8F8;
+            box-shadow: none;
+            font-size: 14px;
+            padding: 6px 12px;
+            outline: none;
+            height: 52px;
+            @include border-radius(3px);
+        }
+        span textarea{
+            height: 196px !important;
+        }
+    }
+}
+// Contact Style 2
+.contact-style-2 {
+    > .dslc-col{
+        position: relative;
+        p{
+            position: relative;
+            input,
+            textarea{
+                width: 100%;
+                border: none;
+                background: #F8F8F8;
+                box-shadow: none;
+                font-size: 14px;
+                padding: 6px 12px;
+                outline: none;
+                @include border-radius(3px);
+            }
+            input{
+                height: 52px;
+            }
+            textarea{
+                height: 196px !important;
+            }
+        }
+        input[type="submit"]{
+            margin-top: 20px;
+        }
+    }
+}
+// Contact Style 3
+.contact-style-3 {
+    > p.dslc-col{
+        position: relative;
+        span input,
+        span textarea{
+            width: 100%;
+            height: 52px;
+            border:none;
+            box-shadow: none;
+            font-size: 14px;
+            padding: 6px 12px;
+            outline: none;
+            background: #F8F8F8;
+            @include border-radius(3px);
+        }	
+        span textarea{
+            height: 196px !important;
+        }
+    }
+}
+.contact-style-1,
+.contact-style-2,
+.contact-style-3{
+    input[type="submit"]{
+        width: 100%;
+        color: #fff;
+        padding: 15px 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        @include transition();
+        @include border-radius(3px);
+        &:hover{
+            background-color: #212121;
+        }
+    }
+}

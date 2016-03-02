@@ -1,0 +1,206 @@
+/*** Header style 2 ***/
+// Hamburger Menu
+#as-header-2{
+    height: 125px;
+    .as-header-2-wrapper{
+        padding: 38px 0;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        z-index: 9;
+        width: 100%;
+        @include transition();
+        .as-list-icon-header-wrapper{
+            float: right;
+            margin-top: 12px;
+            display: inline-block;
+        }
+    }
+    .as-logo-wrapper{
+        display: inline-block;
+        float: left;
+        position: relative;
+        z-index: 9;
+        .as-logo-main-site{
+            display: block;
+        }
+    }
+    #as-hamburger{
+        width: 32px;
+        height: 22px;
+        position: relative;
+        z-index: 9;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        #top, 
+        #middle,
+        #bottom{
+            background: #212121;
+            height: 3px;
+            display: block;
+            margin-bottom: 5px;
+            position: absolute;
+            right: 0;
+            @include transition( width 0.2s cubic-bezier(0.77, 0, 0.175, 1) );
+        }
+        #top{
+            width: 15px;
+            @include transition-delay(0.3s);
+        }
+        #middle{
+            width: 23px;
+            top:9px;
+            @include transition-delay(0.4s);
+        }
+        #bottom{
+            width: 32px;
+            top:18px;
+            @include transition-delay(0.5s);
+        }
+        &:hover{
+            #top, 
+            #middle,
+            #bottom{
+                width: 100%
+            }
+        }
+        .as-close-btn{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include transform( rotate(45deg) );
+            &:before,
+                &:after{
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background: #212121;
+                content: '';
+                -moz-transition: -moz-transform .5s cubic-bezier(1, 0, 0.175, 1);
+                -o-transition: -o-transform .5s cubic-bezier(1, 0, 0.175, 1);
+                -webkit-transition: -webkit-transform .5s cubic-bezier(1, 0, 0.175, 1);
+                transition: transform .5s cubic-bezier(1, 0, 0.175, 1);
+            }
+            &:before{
+                width: 32px;
+                height: 3px;
+
+                margin: -2px 0 0 -16px;
+                @include transform( scaleX(0) );
+                @include transform-origin( 0 50% 0 );
+            }
+            &:after{
+                height: 32px;
+                width: 3px;
+                margin: -16px 0 0 -2px;
+                @include transform( scaleY(0) );
+                @include transition-delay( 0.15s );
+                @include transform-origin( 50% 100% 0 );
+            }
+        }
+        &.is-closed{
+            #top, 
+            #middle,
+            #bottom{
+                width: 0;
+            }
+            #top{
+                @include transition-delay(0);
+            }
+            #middle{
+                @include transition-delay(.1s);
+            }
+            #bottom{
+                @include transition-delay(.2s);
+            }
+            .as-close-btn{
+                &:before{
+                    @include transform( scaleX(1) );
+                }
+                &:after{
+                    @include transform( scaleY(1) );
+                }
+            }
+        }
+    }
+    .as-nav-wrapper{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        overflow: auto;
+        visibility: hidden;
+        @include background-opacity($color: #f7f7ee, $opacity: 0.7);
+        @include transform( scale(0.7) );
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+        transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+        .as-primary-nav{
+            text-align: center;
+            @include list_style_nomal();
+            > li{
+                opacity: 0;
+                visibility: hidden;
+                @include transform( translateY(80px) );
+                @include transition( all 1s cubic-bezier(0.77, 0, 0.175, 1) );
+                @for $i from 1 through 30{
+                    &:nth-of-type(#{$i}){
+                        @include transition-delay(#{$i * 100}ms);
+                    }
+                }
+            }
+            li{
+                margin-bottom: 10px;
+                a{
+                    position: relative;
+                    display: inline-block;
+                    padding: 0px 20px;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 1px;
+                        background-color: #212121;
+                        margin: -5px auto 0;
+                        top:50%;
+                        left: 0;
+                        right: 0; 
+                        @include transition( width .3s cubic-bezier(0.77, 0, 0.175, 1) );
+                    }
+                    &:hover{
+                        &:before{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &.is-visible{
+            opacity: 1;
+            visibility: visible;
+            @include transition( opacity 0.5s );
+            @include transform( scale(1) );
+            -webkit-transition: -webkit-transform 0.4s , opacity 0.4s;
+            -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+            transition: transform 0.4s , opacity 0.4s;
+            .as-primary-nav{
+                > li{
+                    @include transform( translateY(0) );
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,134 @@
+.dialog,
+.dialog__overlay {
+    @include size(100%,100%);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.dialog {
+    position: fixed;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.dialog__overlay {
+    position: absolute;
+    z-index: 1;
+    background: rgba(55, 58, 71, 0.9);
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    @include transition(opacity 0.3s);
+}
+
+.dialog--open .dialog__overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dialog__content {
+    width: 50%;
+    max-width: 860px;
+    min-width: 290px;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    top: -50px;
+}
+
+.dialog--open .dialog__content {
+    pointer-events: auto;
+}
+
+/* Content */
+.dialog__content .dialog-inner {
+    h2{
+        font-weight: 400;
+        font-size: 2em;
+        padding: 0;
+        margin:0 0 20px;
+        color: #fff;
+    }
+    .search-form-wrapper-dialog .searchform .searchform-wrapper{
+        position: relative;
+        display: block;
+        input[type="text"]{
+            background: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            @include border-radius(0);
+            outline: none !important;
+            width: 100%;
+            padding: 10px 100px 10px 0px;
+            color: #aaa;
+            font-size: 16px;
+        }
+        #searchsubmit{
+            background: none;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            font-size: 24px;
+            padding: 0;
+            color: #9E9E9E;
+            @include transition();
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* Animation Annie */
+.dialog button.action{
+    display: none;
+}
+.dialog__overlay {
+    @include transition-duration(0.3s);
+}
+.dialog.dialog--open .dialog__content,
+.dialog.dialog--close .dialog__content {
+    @include animation-duration(0.3s);
+    @include animation-fill-mode(forwards);
+}
+.dialog.dialog--open .dialog__content {
+    @include animation-name(anim-open);
+}
+.dialog.dialog--close .dialog__content {
+    @include animation-name(anim-close);
+}
+.dialog.dialog--open h2,
+.dialog.dialog--open button {
+    @include animation(anim-elem 0.3s both);
+}
+.dialog.dialog--open h2 {
+    @include animation-delay(0.05s);
+}
+
+.dialog.dialog--open button,
+.dialog.dialog--open .searchform-wrapper {
+    @include animation-delay(0.1s);
+}
+
+@include keyframes ( anim-open ) {
+    0% { opacity: 0; @include transform(translate3d(0, 50px, 0)); }
+    100% { opacity: 1; @include transform(translate3d(0, 0, 0)); }
+}
+
+@include keyframes ( anim-close ){
+    0% { opacity: 1; @include transform(translate3d(0, 0, 0)); }
+    100% { opacity: 0; @include transform(translate3d(0, 50px, 0)); }
+}
+
+/* Inner elements animations */
+
+@include keyframes ( anim-elem ) {
+    0% { opacity: 0; @include transform( translate3d(0, 25px, 0)); }
+    100% { opacity: 1; @include transform(translate3d(0, 0, 0)); }
+}
+

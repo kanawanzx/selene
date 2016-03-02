@@ -1,0 +1,26 @@
+.as-post-view-single{
+    position: relative;
+    .as-prev-view-single{
+        float: left;
+        .as-post-prev-link-single{
+            a{
+            }
+            img{
+                max-width: 50px;
+                max-height: 50px;
+            }
+        }
+    }
+    .as-post-next-view-single{
+        float: right;
+        .as-post-next-link-single{
+            a{
+            }
+            img{
+                max-width: 50px;
+                max-height: 50px;
+
+            }
+        }
+    }
+}

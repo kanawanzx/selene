@@ -1,0 +1,20 @@
+// Breadcrumb style 1
+#as-breadcrumb-wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .as-page-title{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .as-breadcrumb-link li{
+        display: inline-block;
+        margin: 0 5px;
+        a{
+            display: inline-block;
+        }
+    }
+}
+
+// Breadcrumb style 2

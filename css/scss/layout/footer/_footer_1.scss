@@ -1,0 +1,54 @@
+/**** Footer Option 1 ****/
+#as-footer-1{
+    display: block;
+    .as-logo-footer{
+        display: inline-block;
+        position: relative;
+    }
+    .as-widget-footer{
+        display: block;
+        margin-bottom: 25px;
+    }
+    a{
+        @include transition();
+    }
+}
+#footer-bottom-1{
+    position: relative;
+    .as-copyright-footer{
+        text-align: center;	
+    }	
+    .as-scrollup{
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        top: -30px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        .dslc-icon{
+            display: inline-block;
+            position: relative;
+            z-index: 99;
+            font-size: 20px;
+            margin-top: 15px;
+            @include transition();
+        }
+        &:hover .dslc-icon{
+            margin-top: 10px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 30px 30px;
+            border-color: transparent transparent #000 transparent;
+            left: -12px;
+        }
+    }
+}

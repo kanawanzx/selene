@@ -1,0 +1,199 @@
+// Header Menu 1
+#as-header-1 #mega_main_menu {
+    position: static !important;
+    >.menu_holder{
+        position: static !important;
+        > .mmm_fullwidth_container{
+            display: none !important;
+        }
+        > .menu_inner{
+            > ul{ 
+                position: static !important;
+                .mega_dropdown{
+                    margin-top: 0px;
+                    box-shadow: none;
+                    > li > span.item_link > .link_content > .link_text{
+                        color: #fff !important;
+                        &:hover{
+                            color: #fff !important;
+                        }
+                    }
+                    a.item_link{
+	                    @include transition(all .5s cubic-bezier(0.7, 0, 0.175, 1));
+	                    &:after{
+	                        content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            background: #404040;
+                            top:50%;
+                            left: 15px;
+                            @include transition(all .5s cubic-bezier(0.7, 0, 0.175, 1));
+                        }
+                        &:hover{
+	                        padding-left: 40px;
+	                        &:after{
+		                        width: 15px; 
+	                        }  
+	                    }
+                    }
+                    .item_link{
+                        text-transform: uppercase;
+                        padding: 10px 15px;
+                        border-color: #404040;
+                        @include transition();
+                        position: relative;
+                        
+                        .link_text{
+                            position: relative;
+                            @include transition();
+                            .link_descr{
+                                position: absolute;
+                                top: 50%;
+                                left: 120%;
+                                min-width: 100px;
+                                margin-top: -6px;
+                                .as-label-shop{
+                                    font-size: 8px;
+                                    text-transform: uppercase;
+                                    padding: 3px 7px;
+                                    color: #fff;
+                                    position: relative;
+                                    &.as-label-new{
+                                        background-color: #D43D10 !important;
+                                    }
+                                    &.as-label-features{
+                                        background-color: #10D45E !important;
+                                    }
+                                    &:before{
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -5px;
+                                        width: 0;
+                                        height: 0;
+                                        border-style: solid;
+                                        border-width: 5px 6px 5px 0;
+                                        margin-top: -5px;
+                                    }
+                                    &.as-label-new:before{
+                                        border-color: transparent #D43D10 transparent transparent !important;
+                                    }
+                                    &.as-label-features:before{
+                                        border-color: transparent #10D45E transparent transparent !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                > li {
+                    padding: 0 20px;
+                    &.default_dropdown{
+	                    .mega_dropdown{
+	                    	border-left: 1px solid #404040;
+                    	}
+                    }
+                    &.multicolumn_dropdown{
+                        > .mega_dropdown{
+	                        margin-top: 0 !important;
+                            padding: 30px 0;
+                            > li{
+                                padding-bottom: 0 !important;
+                                border-right: 1px solid #404040;
+                                min-height: 150px;
+                                padding: 10px 30px;
+                                &:last-child{
+	                                border: none;
+                                }
+                            }
+                        }
+                    }
+/*
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: #fff;
+                        bottom: 0;
+                        left: 0;
+                        @include transition();
+                        @include transform( scale(0) );
+
+                    }
+                    &:hover:before{
+                        @include transform( scale(1) );
+                    }
+*/
+                    &.menu-item-has-children{
+                        > .item_link{
+                            &:after{
+                                content: '\f107';
+                                display: block;
+                                position: absolute;
+                                top:inherit;
+                                right: -5px;
+                                margin-top: 0;
+                                border: none;
+                                font-family: 'DSLCFontAwesome';
+                                color: #fff;
+                                @include transition();
+                            }
+                        }
+                    }
+                    > .item_link{
+                        padding: 0;
+                        .link_text{
+                            text-transform:uppercase;
+                            position: relative;
+                            @include transition();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#mega_main_menu > .menu_holder > .menu_inner .item_link > .link_content > .link_text > .link_descr{
+    position: absolute;
+    top: 8px;
+    margin: 0;
+    right: 10px;
+    .as-label-shop{
+        font-size: 8px;
+        text-transform: uppercase;
+        padding: 1px 9px;
+        color: #fff;
+        position: absolute;
+        font-weight: 700;
+        &.as-label-new{
+            background-color: #D43D10 !important;
+        }
+        &.as-label-features{
+            background-color: #10D45E !important;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 5px 0 0;
+        }
+        &.as-label-new:before{
+            border-color: #D43D10 transparent transparent transparent !important;
+        }
+        &.as-label-features:before{
+            border-color: #10D45E transparent transparent transparent !important;
+        }
+    }
+}
+body *[class] #mega_main_menu.language_direction-ltr li.tabs_dropdown > .mega_dropdown > li.menu-item:hover > .item_link:before, 
+body *[class] #mega_main_menu.language_direction-ltr li.tabs_dropdown > .mega_dropdown > li.menu-item > .item_link:before, 
+body *[class] #mega_main_menu li.default_dropdown > .mega_dropdown > li.menu-item.drop_to_right:hover > .item_link:before, 
+body *[class] #mega_main_menu li.default_dropdown > .mega_dropdown > li.menu-item.drop_to_right > .item_link:before{
+    right: 5px !important;
+}

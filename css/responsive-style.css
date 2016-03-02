@@ -1,0 +1,252 @@
+/*
+This file contains the styling for responsive of theme.
+*/
+/** F I X  F O R  G O O G L E  M A P **/
+/* Bootstrap Css Map Fix*/
+#dslc-content .as_googlemap img { 
+    max-width: none !important;
+}
+/* Bootstrap Css Map Fix*/
+#dslc-content .as_googlemap label { 
+    width: auto !important; 
+    display:inline !important; 
+} 
+.gallery-caption{}
+.bypostauthor {}
+body.dslc-page .as-content-wrapper .as-wrapper{
+    width: auto !important;
+}
+body.dslc-page .as-content-wrapper{
+    padding: 0;
+}
+#dslc-content img {
+    max-width: 100%;
+}
+/*
+.dslca-change-width-modules-area-options, .dslca-change-width-module-options {
+        width: 118px !important;
+}
+.dslc-res-phone .dslc-posts-orientation-horizontal .dslc-post-thumb {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+}
+.dslc-res-phone .dslc-posts-orientation-horizontal .dslc-post-main {
+        width: 100% !important;
+}
+*/
+/* ---------------------------------------- */
+/* 4.  Video Responsive
+/* ---------------------------------------- */
+.flex-video {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+    overflow: hidden;
+}
+.flex-video.widescreen {
+    padding-bottom: 57.25%;
+}
+.flex-video.vimeo {
+    padding-top: 0;
+}
+.flex-video iframe, .flex-video object, .flex-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ---------------------------------------- */
+/* 4.  Columns & Page Responsive
+/* ---------------------------------------- */
+.as-wrapper {
+    width: 1170px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+body.dslc-page #main .as-wrapper {
+    width: auto !important;
+}
+body.dslc-page #main {
+    padding: 0;
+}
+body.dslc-res-phone .dslc-col{
+    margin-bottom: 0 !important;
+}
+#dslc-content img {
+    max-width: 100%;
+}
+.dslca-change-width-modules-area-options, .dslca-change-width-module-options {
+    width: 118px !important;
+}
+.dslc-res-phone .dslc-posts-orientation-horizontal .dslc-post-thumb {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+.dslc-res-phone .dslc-posts-orientation-horizontal .dslc-post-main {
+    width: 100% !important;
+}
+/* ---------------------------------------- */
+/* 4.  Media Query Responsive
+/* ---------------------------------------- */
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+    .flex-video {
+        padding-top: 0;
+    }
+}
+/**
+* Smaller Monitors
+*/
+@media only screen and ( min-width: 1024px ) and ( max-width: 1170px ) {
+    .as-wrapper, .dslc-add-modules-section, .dslc-modules-section-wrapper{
+        width: 960px !important;
+    }
+    .dslc-modules-section.dslc-full .dslc-modules-section-wrapper {
+        width: auto !important;
+    }
+}
+@media ( max-width: 1170px ) {
+    #as-header-1 .as-search-and-shop .as-hamburger-menu-res{
+        display: inline-block;
+    }
+    #as-header-1 .as-cont-menu{
+        display: none;
+    }
+    #as-header-1 .as-search-and-shop{
+		min-height: 80px;
+		align-items: center;
+		justify-content: flex-end;
+		display: flex;
+    }
+    .as-single-project .as-post-btn-group .as-btn-single-project, 
+    .as-single-project .as-post-btn-group .as-post-social-group{
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    .as-single-project .as-post-btn-group .as-btn-single-project{
+        margin-bottom: 20px;
+    }
+}
+@media ( max-width: 1024px ) {
+    #as-comment-wrapper .as-input-comment{
+        display: block;
+        width: 50%;
+        margin-right: 0;
+    }
+    #as-page-blog-classic.as-sidebar-border-right .dslc-col.dslc-4-col .as-border-sidebar,
+    #as-page-blog-classic.as-sidebar-border-left .dslc-col.dslc-4-col .as-border-sidebar{
+        display: none;
+    }
+}
+/**
+ * Tablets
+ */
+@media only screen and ( min-width: 768px ) and ( max-width: 1023px ) {
+    .as-wrapper, .dslc-add-modules-section, .dslc-modules-section-wrapper{
+        width: 748px !important;
+    }
+    .dslc-modules-section.dslc-full .dslc-modules-section-wrapper {
+        width: auto !important;
+    }
+
+}
+@media ( max-width: 768px ) {
+    #as-header-1 .as-top-header-wrapper{
+        display: none;
+    }
+    #as-menu-header-1 .dslc-col.dslc-3-col,
+    #as-menu-header-1 .dslc-col.dslc-9-col,
+    #as-header-3 .as-header-3-wrapper-responsive .dslc-col.dslc-3-col,
+    #as-header-3 .as-header-3-wrapper-responsive .dslc-col.dslc-9-col{
+		width:48.93617%;
+		display: block;
+		float: left;
+		margin-right: 2.12766%;
+		text-align: right;
+    }
+    #as-menu-header-1 .dslc-col.dslc-9-col.dslc-last-col,
+    #as-header-3 .as-header-3-wrapper-responsive .dslc-col.dslc-9-col.dslc-last-col{
+	    margin-right: 0;
+    }
+    .dl-menuwrapper div.dl-trigger{
+		width: 30px;
+		height: 30px;
+    }
+    .dl-menuwrapper div.dl-trigger .as-line-menu {
+	    width: 60%;
+	    height: 2px;
+	    top: 8px;
+	}
+	.dl-menuwrapper div.dl-trigger .as-line-menu:before{
+		top:6px;
+	}
+	.dl-menuwrapper div.dl-trigger .as-line-menu:after {
+	    top: 12px;
+	}
+	.dl-menuwrapper div.dl-trigger .as-line-menu:before, 
+	.dl-menuwrapper div.dl-trigger .as-line-menu:after{
+		height: 2px;
+	}
+	#as-header-3{
+		width: 100%;
+		height: auto;
+		position: relative;
+		background: #fff;
+	}
+	#as-header-3 .as-header-3-wrapper{
+		display: none;
+	}
+	#as-header-3 .as-header-3-wrapper-responsive{
+		display: block;
+		padding: 20px 0;
+	}
+	.as-fix-body, .as-fix-body-page-choice{
+		padding: 0;
+	}
+	#as-header-3 .as-header-3-wrapper-responsive .dl-menuwrapper div.dl-trigger{
+		float: right;
+	}
+	#as-footer-3 .as-footer-3-logo{
+		text-align: center;
+	}
+	#as-footer-3 .as-footer-wrapper .as-footer-3-menu .as-menu-footer-3{
+		margin: 20px 0 !important; 
+	}
+	#as-footer-3 .as-footer-wrapper .as-footer-3-button .as-scrollup{
+		float: none;
+		margin: 0 auto;
+	}
+}
+/**
+ * Mobile Landscape
+ */
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
+    .as-wrapper, .dslc-add-modules-section, .dslc-modules-section-wrapper,
+    .as-fix-body.as-header-option-3 .as-wrapper, 
+    .as-fix-body-page-choice.as-header-option-3 .as-wrapper{
+        width: 420px !important;
+    }
+    .dslc-modules-section.dslc-full .dslc-modules-section-wrapper {
+        width: auto !important;
+    }
+}
+@media ( max-width: 480px ) {
+	.contact-style-1 > p.dslc-col,
+	.contact-style-3 > p.dslc-col{
+		margin-bottom: 30px !important;
+	}
+}
+/**
+ * Mobile Portrait
+ */
+@media only screen and ( max-width: 479px ) {
+    .as-wrapper, .dslc-add-modules-section, .dslc-modules-section-wrapper{
+        width: 300px !important;
+    }
+    .dslc-modules-section.dslc-full .dslc-modules-section-wrapper {
+        width: auto !important;
+    }
+}

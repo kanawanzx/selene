@@ -1,0 +1,78 @@
+/****** Single Project Style ******/
+.single-dslc_projects  #as-page-blog-classic .dslc-col.dslc-12-col{
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+#as-page-blog-classic .as-post-item.dslc_projects{
+    padding-left: 0 !important;
+    .as-date-format-wrapper{
+        display: none;
+    }
+    .as-content-blog-wrapper.as-single-project{
+        .as-post-title,
+        .as-post-title a{
+            font-size: 24px;
+            color: #212121;
+            margin-bottom: 10px;
+            @include transition();
+        }
+        .as-post-info {
+            span.as-date{
+                margin-right: 20px;
+            }
+            .dslc-icon{
+                margin-right: 5px;
+            }
+        }
+        .as-info-project-meta{
+            display: block;
+            position: relative;
+            margin-bottom: 30px;
+            > div{
+                display: block;
+                padding: 5px 0;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #D8D8D8;
+                > span.dslc-icon{
+                    min-width: 15px;
+                    display: inline-block;
+                }
+                > span.as-info-sum{
+                    min-width: 90px;
+                    display: inline-block;
+                }
+            }
+        }
+        .as-btn-readmore.as-btn-single-project{
+            font-weight: 700 !important;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 8px 30px;
+            border: 2px solid #797979;
+            @include transition();
+            &:hover{
+                color: #fff;
+            }
+        }
+        .as-post-social-group .as-share-social-list, 
+        .as-post-social-group .as-btn-heart-blog {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        a.as-post-like {
+            color: #797979;
+            display: inline-table;
+            @include transition();
+            &:hover,
+                &.active{
+                span.dslc-icon{
+                    color: #F50057;
+                }
+            }
+        }
+    }
+}
+

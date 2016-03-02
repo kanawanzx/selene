@@ -1,0 +1,40 @@
+#as-footer-6{
+	.as-footer-wrapper{
+		text-align: center;
+		.as-footer-6-button{
+		.as-scrollup {
+				@include transition(0.5s);
+				border: 1.5px solid #dedede;
+				cursor: pointer;
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				border-radius: 100%;
+				.dslc-icon {
+					position: relative;
+					top: 12%;
+				}
+				&:hover{
+				opacity: 0.5;
+				}
+			}
+		}
+		.as-footer-6-menu {
+			.as-menu-footer-6 {
+				li {
+					display: inline-table;
+					padding: 0px 11px;
+					text-align: left;
+					ul.sub-menu {
+						text-align: left;
+						display: block;
+						li {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

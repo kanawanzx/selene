@@ -1,0 +1,78 @@
+/*** Header style 1 ***/
+#as-header-4{
+    .as-container{
+        .as-top-header-wrapper{
+            width: 100%;
+            min-height: 44px;
+            display: block;
+            position: relative;
+            line-height: 44px;
+            .as-top-content{
+                .dslc-col{
+                    ul.as-list-social-header-wrapper{
+                        li{
+                            margin:0px;
+                            width: 52px;
+                            height: 44px;
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                text-align: center;
+                                border-right: 1px solid rgba(255, 255, 255, 0.15);
+                                border-radius: 0px;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .as-container-header-wrapper{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        .as-wrapper{
+            .dslc-col{
+                .as-contact-left{
+                    line-height: 10;
+                }
+                .as-image-center{
+                    text-align: center;
+                }
+                .as-cart-right{
+                    float: right;
+                    line-height: 10
+
+                }
+                .as-search-and-shop{
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .as-bottom-header-wrapper{
+        .as-wrapper{
+            .dslc-col{
+                .as-menu{
+                    text-align: center; 
+                    ul{
+                        li{
+                            display: inline;
+                            margin-left: 10px;
+                            padding: 10px 20px;
+                            border: 1px solid;
+                            a{
+                                font-family: 'Lato',serif;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 40px;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

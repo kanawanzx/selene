@@ -1,0 +1,81 @@
+/**** 404 Page Style ******/
+.as-wrapper-page-404{
+    .as-wrapper-number-404{
+        text-align: center;
+        margin-bottom: 30px;
+        h2{
+            margin-bottom: 0;
+            @include animation ( as-noise-text-1 2s linear infinite );
+            position: relative;
+            z-index: 3;
+            &:after {
+                content: '404';
+                font-size: 100px;
+                text-align: center;
+                width: 150px;
+                height: 60px;
+                line-height: 60px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                color: #AFAFAF;
+                z-index: -2;
+                @include animation ( as-noise-text-2 .2s linear infinite );
+            }
+            &:before {
+                content: '404';
+                font-size: 100px;
+                font-style: italic;
+                text-align: center;
+                width: 100px;
+                height: 60px;
+                line-height: 60px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                color: rgb(254, 234, 234);
+                z-index: -1;
+                @include animation ( as-noise-text-3 .2s linear infinite );
+            }
+        }
+    }
+    .as-context-404{
+        text-align: center;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .as-context-404-button{
+        text-align: center;
+        .as-button-style{
+            margin: 0 10px;
+            width: 220px;
+            padding: 10px 20px;
+        }
+    }
+}
+@include keyframes ( as-noise-text-1 ) {
+    0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; @include transform ( scaleY(1) );}  
+    4.3% {opacity: 1; @include transform ( scaleY(1.7) );}
+    43% {opacity: 1; @include transform ( scaleY(1.5) );}
+}
+@include keyframes ( as-noise-text-2 ) {
+    0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+    10% {opacity: .1;}
+    50% {opacity: .5; left: -6px;}
+    80% {opacity: .3;}
+    100% {opacity: .6; left: 2px;}
+}
+@include keyframes ( as-noise-text-3 ) {
+    0%,3%,5%,42%,44%,100% {opacity: 1; @include transform ( scaleY(1) );}
+    4.3% {opacity: 1; @include transform ( scaleY(2) );}
+    43% {opacity: 1; @include transform ( scaleX(3) rotate(60deg) );}
+}

@@ -1,0 +1,45 @@
+#as-footer-3 {
+	min-height: 80px;
+	.as-footer-3-logo{
+		display: block;
+	}
+	.as-footer-wrapper {
+		.as-footer-3-menu {
+			.as-menu-footer-3 {
+				text-align: center;
+				li {
+					display: inline-block;
+					margin: 0 10px;
+					a{
+						@include transition();
+					}
+				}
+			}
+		}
+		.as-footer-3-button {
+			.as-scrollup {
+				border: 1px solid #dedede;
+				cursor: pointer;
+				display: block;
+				width: 40px;
+				height: 40px;
+				background: #fff;
+				position: relative;
+				float: right;
+				@include transition();
+				@include border-radius(100%);
+				.dslc-icon {
+					position: absolute;
+					text-align: center;
+					left: 0;
+					right: 0;
+					top: 50%;
+					@include transform(translateY(-60%));
+				}
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+	}
+}

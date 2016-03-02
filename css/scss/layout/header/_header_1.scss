@@ -1,0 +1,126 @@
+/*** Header style 1 ***/
+.as-boxed{
+    #as-header-1{
+        >.as-top-header-wrapper,>.as-header-1-wrapper{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    #as-header-1 #as-menu-header-1.as-bg-sticky{
+	    left: 0px;
+	    top: 0;
+	    width: 100% !important;
+	    .as-wrapper{
+		    width: 1170px;
+	    }
+    }
+}
+#as-header-1{
+    width: 1170px;
+    min-height: 90px;
+    position: absolute;
+    z-index: 9999;
+    background: #272727;
+    padding: 0 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top:30px;
+    .as-wrapper{
+	    position: inherit;
+    }
+    &.as-header-normal{
+	    position: relative !important;
+    }
+    .as-top-header-wrapper{
+        padding: 5px 0;
+        @include background-opacity(#ffffff, .2);
+        .dslc-6-col{
+            min-height: 5px;
+        }
+        .as-info-top-header{
+            li{
+                display: inline-block;
+                margin-right: 15px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 600;
+                .dslc-icon{
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    #as-menu-header-1{
+        &.as-header-sticky{
+	        width: 100%;   
+        }
+        &.as-bg-sticky{
+	        border: none;
+        }
+    }
+    .as-logo-main-site{
+        display: block;
+        position: relative;
+        line-height: 0;
+    }
+    .as-header-1-wrapper .dslc-col.dslc-9-col{
+        text-align: right;
+        padding-top: 10px;
+    }
+    .as-cont-menu{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .as-search-and-shop{
+        @include list_style_nomal();
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        > li{
+            display: inline-block;
+            margin-left: 25px;
+            vertical-align: middle;
+            .dslc-icon{
+                font-size: 20px;
+                color: #fff;
+                @include transition();
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+        .as-icon-shopping{
+            position: relative;
+            .as-icon-shoper{
+                display: block;
+                width: 25px;
+                height: 30px;
+                svg{
+                    fill: #fff;
+                }
+            }
+            .as-quatity-item-woo{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                display: block;
+                background: #fff;
+                text-align: center;
+                color: #fff;
+                top: -10px;
+                right: -10px;
+                font-size: 12px;
+                @include border-radius(50%);
+            }
+        }
+        .as-hamburger-menu-res{
+            display: none;
+        }
+    }
+}
+.as-none-border{
+    border: none !important;
+}

@@ -1,0 +1,42 @@
+/****** Single Blog Style ******/
+#as-about-author{
+    display: block;
+    margin-bottom: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    position: relative;
+    .as-avatar-img{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #eee;
+        @include border-radius(50%);
+        float: left;
+        margin-right: 25px;
+        img{
+            padding: 5px;
+            @include border-radius(50%);
+        }
+    }
+    .as-author-content{
+        display: table;
+        h3.as-author-name{
+            font-size: 22px;
+            color: #838383;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-bottom: 3px;
+            .as-author-info{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+.as-full-img-post .as-featured-img img{
+    width: 100%;
+}

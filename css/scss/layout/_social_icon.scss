@@ -1,0 +1,83 @@
+// List Social Icon Style.
+%twitter-color		{ background: #44ccf6; }
+%facebook-color		{ background: #3b5998; }
+%dribbble-color		{ background: #ea4c89; }
+%google-plus-color	{ background: #d13f2d; }
+%pinterest-color	{ background: #cb2027; }
+%youtube-color      { background: #cc181e; }
+%vimeo-color        { background: #17b3e8; }
+%behance-color      { background: #17BCE2; }
+%flickr-color       { background: #70A7EC; }
+%tumblr-color       { background: #44617F; }
+%linkedin-color     { background: #0177B5; }
+%instagram-color	{ background: #6A453C; }
+%github-color       { background: #767cf2; }
+%dropbox-color      { background: #007DE4; }
+%foursquare-color	{ background: #17BCE2; }
+
+.as-list-social-header-wrapper{
+    text-align: right;
+    @include list_style_nomal();
+    li{
+        display: inline-block;
+        margin-left: 10px;
+        a{
+            color: #fff;
+            font-size: 12px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            @include border-radius(3px);
+            @include transition(all .3s ease);
+            &:hover{
+                color: #fff;
+            }
+            &.as-twitter:hover{
+                @extend %twitter-color;
+            }
+            &.as-facebook:hover{
+                @extend %facebook-color;
+            }
+            &.as-dribbble:hover{
+                @extend %dribbble-color;
+            }
+            &.as-google-plus:hover{
+                @extend %google-plus-color;
+            }
+            &.as-pinterest:hover{
+                @extend %pinterest-color;
+            }
+            &.as-youtube:hover{
+                @extend %youtube-color;
+            }
+            &.as-vimeo:hover{
+                @extend %vimeo-color;
+            }
+            &.as-behance:hover{
+                @extend %behance-color;
+            }
+            &.as-flickr:hover{
+                @extend %flickr-color;
+            }
+            &.as-tumblr:hover{
+                @extend %tumblr-color;
+            }
+            &.as-linkedin:hover{
+                @extend %linkedin-color;
+            }
+            &.as-instagram:hover{
+                @extend %instagram-color;
+            }
+            &.as-github:hover{
+                @extend %github-color;
+            }
+            &.as-dropbox:hover{
+                @extend %dropbox-color;
+            }
+            &.as-foursquare:hover{
+                @extend %foursquare-color;
+            }
+        }
+    }
+}
